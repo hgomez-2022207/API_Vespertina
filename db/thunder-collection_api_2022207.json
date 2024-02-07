@@ -1,0 +1,119 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "api_2022207",
+    "dateExported": "2024-02-07T23:48:30.948Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "7bb396b1-bcb7-4441-8ba4-f8a2031fa2f0",
+            "colId": "29d78991-3576-40c9-85cb-6de28c24395e",
+            "containerId": "",
+            "name": "post usuarios",
+            "url": "http://localhost:3000/api/Usuarios",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-02-06T19:33:10.542Z",
+            "modified": "2024-02-07T21:30:45.965Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"nombre\":\"tes16\",\n    \"correo\":\"test16@gmail.com\",\n    \"password\":\"12345678\",\n    \"role\":\"USER_ROLE\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ad8b74b4-7fd1-43c8-8160-01fe450487ee",
+            "colId": "29d78991-3576-40c9-85cb-6de28c24395e",
+            "containerId": "",
+            "name": "get usuarios",
+            "url": "http://localhost:3000/api/Usuarios?desde=5&limite=6",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-02-06T21:38:11.935Z",
+            "modified": "2024-02-06T22:43:56.615Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "desde",
+                    "value": "5",
+                    "isPath": false
+                },
+                {
+                    "name": "limite",
+                    "value": "6",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "e4c5d2dc-7015-4f4d-9240-72ecdd129538",
+            "colId": "29d78991-3576-40c9-85cb-6de28c24395e",
+            "containerId": "",
+            "name": "get UsuarioById",
+            "url": "http://localhost:3000/api/Usuarios/65c2a728db4468c5b313f847",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-02-06T21:50:19.796Z",
+            "modified": "2024-02-07T22:54:06.883Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c1e9a14a-4b7e-4ecc-9d23-3967d3a1ee3f",
+            "colId": "29d78991-3576-40c9-85cb-6de28c24395e",
+            "containerId": "",
+            "name": "put usuario",
+            "url": "http://localhost:3000/api/Usuarios/65c2a731db4468c5b313f84b",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2024-02-06T22:10:01.179Z",
+            "modified": "2024-02-06T23:20:02.962Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"Herlin Gomez\",\n  \"role\":\"USER_ROLE\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1ad7279f-7b97-4e81-b42c-9747eb60efe1",
+            "colId": "29d78991-3576-40c9-85cb-6de28c24395e",
+            "containerId": "",
+            "name": "delete usuario",
+            "url": "http://localhost:3000/api/Usuarios/65c29a6b292cf55be93a2f01",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2024-02-06T22:41:33.041Z",
+            "modified": "2024-02-07T22:13:36.640Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4dcff12e-c8e3-4318-86ec-da0d4884de90",
+            "colId": "29d78991-3576-40c9-85cb-6de28c24395e",
+            "containerId": "",
+            "name": "post mascotas",
+            "url": "http://localhost:3000/api/mascotas",
+            "method": "POST",
+            "sortNum": 100000,
+            "created": "2024-02-07T22:28:37.567Z",
+            "modified": "2024-02-07T23:01:16.361Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Benito\",\n  \"especie\": \"Canino\",\n  \"raza\": \"french\",\n  \"edad\": 2\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

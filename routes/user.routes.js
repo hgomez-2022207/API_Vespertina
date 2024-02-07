@@ -11,8 +11,6 @@ const { usuariosPost,
         
 const { existeEmail, esRoleValido, existeUsuarioByID } = require('../helpers/db-validator');
 
-const { existenteEmail, esRoleValido, existeUsuarioById } = require('../helpers/db-validators');
-
 const router = Router();
 
 router.get("/", usuariosGet);
@@ -51,8 +49,8 @@ router.delete(
     [
         check('id', 'id no valido'),
         check('id').custom(getUsuarioById),
-        validarCampos
-    ]
-)
+        
+    ], usuariosDelete
+);
 
 module.exports = router;
