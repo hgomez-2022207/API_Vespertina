@@ -17,6 +17,10 @@ const petSchema = Schema({
     edad:{
         type:Number,
         require: true
+    },
+    estado:{
+        type:Boolean,
+        default:true
     }
 
 });
