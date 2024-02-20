@@ -1,0 +1,100 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Mascota",
+    "dateExported": "2024-02-20T21:24:48.908Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "e53153dc-6374-4844-9c24-4af8f00834cb",
+            "colId": "773673c4-294a-49a4-af78-958320019887",
+            "containerId": "",
+            "name": "create mascota",
+            "url": "http://localhost:3000/api/mascota",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-02-20T21:23:39.613Z",
+            "modified": "2024-02-20T21:23:39.613Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"Benito123\",\n  \"especie\":\"Canina\",\n  \"raza\":\"French\",\n  \"edad\":2\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "b173745e-f72e-4ef3-8884-4086cb65b7e6",
+            "colId": "773673c4-294a-49a4-af78-958320019887",
+            "containerId": "",
+            "name": "list mascotas",
+            "url": "http://localhost:3000/api/mascota?desde=0&limite=20",
+            "method": "GET",
+            "sortNum": 65000,
+            "created": "2024-02-20T21:23:39.614Z",
+            "modified": "2024-02-20T21:23:39.614Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "desde",
+                    "value": "0",
+                    "isPath": false
+                },
+                {
+                    "name": "limite",
+                    "value": "20",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "392de377-c4b9-43ac-8b98-dce99c87a9c1",
+            "colId": "773673c4-294a-49a4-af78-958320019887",
+            "containerId": "",
+            "name": "read Mascota",
+            "url": "http://localhost:3000/api/mascota/65d4f9ff175c92f77eb38e15",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2024-02-20T21:23:39.615Z",
+            "modified": "2024-02-20T21:23:39.615Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c41e57d8-b7fd-4b53-95c0-c0b898f11a02",
+            "colId": "773673c4-294a-49a4-af78-958320019887",
+            "containerId": "",
+            "name": "put mascotas",
+            "url": "http://localhost:3000/api/mascota/65d4f9ff175c92f77eb38e15",
+            "method": "PUT",
+            "sortNum": 90000,
+            "created": "2024-02-20T21:23:39.616Z",
+            "modified": "2024-02-20T21:23:39.616Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"dsads\",\n  \"especie\":\"Canina\",\n  \"raza\":\"French\",\n  \"edad\":4\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "66701488-31ba-4a40-914c-4317abfc4d2e",
+            "colId": "773673c4-294a-49a4-af78-958320019887",
+            "containerId": "",
+            "name": "delete mascota",
+            "url": "http://localhost:3000/api/mascota/65d4f9ff175c92f77eb38e15",
+            "method": "DELETE",
+            "sortNum": 100000,
+            "created": "2024-02-20T21:23:39.617Z",
+            "modified": "2024-02-20T21:23:39.617Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

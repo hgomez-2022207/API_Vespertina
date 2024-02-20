@@ -46,7 +46,9 @@ const mascotaPut = async (req, res) => {
     const {nombre, especie,raza,edad} = req.body;
     const mascota = await Mascota.findByIdAndUpdate(id,{nombre, especie,raza,edad});
 
-    const salt = bcryptjs.genSaltSync();
+    //const salt = bcryptjs.genSaltSync();
+
+    await mascota.save();
 
     res.status(200).json({
         msg: 'Datos actualizados exitosamente',
@@ -54,9 +56,22 @@ const mascotaPut = async (req, res) => {
     });
 }
 
+const mascotaDelete = async(req,res = response) => {
+    const { id } = req.params;
+    const mascota = await Mascota.findByIdAndUpdate(id,{estado:false});
+    const mascotaAtentica = req.mascota;
+
+    res.status(200).json({
+        msg: "Mascota eliminada",
+        mascota,
+        mascotaAtentica
+    });
+}
+
 module.exports = {
     mascotaPost,
     mascotasGet,
     getMascotaById,
-    mascotaPut
+    mascotaPut,
+    mascotaDelete
 }

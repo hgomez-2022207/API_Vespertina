@@ -6,7 +6,8 @@ const { validarCampos } = require('../middlewares/validar-campos');
 const { mascotasGet,
         getMascotaById,
         mascotaPost,
-        mascotaPut} = require('../controllers/pet.controllers');
+        mascotaPut,
+        mascotaDelete} = require('../controllers/pet.controllers');
 
 const { existeMascotaById } = require('../helpers/db-validator')
         
@@ -39,6 +40,15 @@ router.put(
         check('raza','esta informacion no debe estar vacia').not().isEmpty(),
         check("edad","Para un cuidado mas apropiado anote el numero de años que tiene la mascota").not().isEmpty().isNumeric(),
     ], mascotaPut
+);
+
+router.delete(
+    "/:id",
+    [
+        check('id', 'id no valido'),
+        check('id').custom(existeMascotaById),
+        
+    ], mascotaDelete
 );
 
 module.exports = router;

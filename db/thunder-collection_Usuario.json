@@ -1,0 +1,100 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Usuario",
+    "dateExported": "2024-02-20T21:25:43.994Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "f1d96b30-b957-430e-82c9-ec4655eafa10",
+            "colId": "71496cd3-859a-4db1-ae75-f41e5352175f",
+            "containerId": "",
+            "name": "create usuario",
+            "url": "http://localhost:3000/api/usuarios",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-20T18:52:39.536Z",
+            "modified": "2024-02-20T18:57:17.852Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"Herlin\",\n  \"correo\":\"fernando21@gmail.com\",\n  \"password\": \"123456\",\n  \"role\": \"USER_ROLE\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6f9b279f-24f0-4f53-88e1-04d11a163cf6",
+            "colId": "71496cd3-859a-4db1-ae75-f41e5352175f",
+            "containerId": "",
+            "name": "list usuarios",
+            "url": "http://localhost:3000/api/usuarios?desde=1&limite=20",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-20T18:52:39.537Z",
+            "modified": "2024-02-20T19:09:29.558Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "desde",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "limite",
+                    "value": "20",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "568649e0-8cca-47d6-91b8-556f0048b8a9",
+            "colId": "71496cd3-859a-4db1-ae75-f41e5352175f",
+            "containerId": "",
+            "name": "read Usuario",
+            "url": "http://localhost:3000/api/usuarios/65c29a89292cf55be93a2f09",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-20T18:52:39.538Z",
+            "modified": "2024-02-20T19:10:32.451Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3b350c7e-2b0c-4962-a685-80e81352f432",
+            "colId": "71496cd3-859a-4db1-ae75-f41e5352175f",
+            "containerId": "",
+            "name": "update usuario",
+            "url": "http://localhost:3000/api/usuarios/65c2a728db4468c5b313f847",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-02-20T18:52:39.539Z",
+            "modified": "2024-02-20T20:07:00.545Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Herlin Fernando Escobar\",\n  \"role\":\"ADMIN_USER\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "4a0b1718-78b5-4725-90bf-415e8c13c507",
+            "colId": "71496cd3-859a-4db1-ae75-f41e5352175f",
+            "containerId": "",
+            "name": "delete usuario",
+            "url": "http://localhost:3000/api/usuarios/65c29a89292cf55be93a2f09",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-02-20T18:52:39.540Z",
+            "modified": "2024-02-20T19:08:42.595Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
