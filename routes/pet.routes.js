@@ -5,7 +5,7 @@ const { validarCampos } = require('../middlewares/validar-campos');
 
 const { mascotasGet,
         getMascotaById,
-        mascotaPost} = require('../controllers/pet.controller');
+        mascotaPost} = require('../controllers/pet.controllers');
         
 const router = Router();
 
