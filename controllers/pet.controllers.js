@@ -5,8 +5,8 @@ const { response } = require('express');
 const mascotasGet = async (req, res = response) =>{
     const {limite, desde} = req.query;
     const query = {estado:true};
-
-    const [total, mascotas] = await Promise.all([
+    console.log("mascotasGet");
+    const [total, mascota] = await Promise.all([
         Mascota.countDocuments(query),
         Mascota.find(query)
         .skip(Number(desde))
