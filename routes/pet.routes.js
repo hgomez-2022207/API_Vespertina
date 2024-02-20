@@ -6,6 +6,8 @@ const { validarCampos } = require('../middlewares/validar-campos');
 const { mascotasGet,
         getMascotaById,
         mascotaPost} = require('../controllers/pet.controllers');
+
+const { existeMascotaById } = require('../helpers/db-validator')
         
 const router = Router();
 
@@ -19,5 +21,12 @@ router.post(
     ], mascotaPost);
 
 router.get("/", mascotasGet);
+
+router.get(
+    "/:id",
+    [
+        check('id','No es un id valido').isMongoId(),
+        check('id').custom(existeMascotaById),
+    ], getMascotaById);
 
 module.exports = router;

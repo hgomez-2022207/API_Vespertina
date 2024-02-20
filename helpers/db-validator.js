@@ -23,8 +23,16 @@ const existeUsuarioById = async (id = '') => {
     }
 }
 
+const existeMascotaById = async (id = '') => {
+    const existeMascota = await Mascota.findOne({id});
+    if(existeMascota){
+        throw new Error(`la mascota con el id ${ id } no existe`)
+    }
+}
+
 module.exports = {
     esRoleValido,
     existeEmail,
-    existeUsuarioById
+    existeUsuarioById,
+    existeMascotaById
 }
