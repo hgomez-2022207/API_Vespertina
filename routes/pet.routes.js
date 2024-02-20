@@ -18,3 +18,5 @@ router.post(
         check("edad","Para estar seguros del procedimiento a seguir, especifique la edad de la mascota").not().isEmpty(),
         validarCampos, 
     ], mascotaPost);
+
+module.exports = router;
