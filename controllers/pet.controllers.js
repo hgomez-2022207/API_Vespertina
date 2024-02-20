@@ -41,8 +41,22 @@ const mascotaPost = async (req, res) => {
     });
 }
 
+const mascotaPut = async (req, res) => {
+    const { id } = req.params;
+    const {nombre, especie,raza,edad} = req.body;
+    const mascota = await Mascota.findByIdAndUpdate(id,{nombre, especie,raza,edad});
+
+    const salt = bcryptjs.genSaltSync();
+
+    res.status(200).json({
+        msg: 'Datos actualizados exitosamente',
+        mascota
+    });
+}
+
 module.exports = {
     mascotaPost,
     mascotasGet,
-    getMascotaById
+    getMascotaById,
+    mascotaPut
 }
