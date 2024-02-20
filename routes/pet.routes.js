@@ -15,8 +15,7 @@ router.post(
         check("nombre","nombre no puede estar vacio").not().isEmpty(), 
         check("especie", "La informacion de especie no puede estar vacia").not().isEmpty(),
         check("raza", "La informacion de raza no puede estar vacia").not().isEmpty(),
-        check("edad","Para estar seguros del procedimiento a seguir, especifique la edad de la mascota").not().isEmpty(),
-        validarCampos, 
+        check("edad","Para estar seguros del procedimiento a seguir, especifique la edad de la mascota").not().isEmpty()
     ], mascotaPost);
 
 module.exports = router;
