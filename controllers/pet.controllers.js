@@ -21,7 +21,7 @@ const mascotasGet = async (req, res = response) =>{
 
 const getMascotaById  = async (req, res) =>{
     const{ id } = req.params;
-    const mascotas = await Mascota.findOne({_id: id});
+    const mascota = await Mascota.findOne({_id: id});
 
     res.status(200).json({
         mascota
@@ -30,7 +30,7 @@ const getMascotaById  = async (req, res) =>{
 
 const mascotaPost = async (req, res) => {
     const {nombre, especie, raza, edad} = req.body;
-    const mascotas = new Mascota({nombre, especie, raza, edad});
+    const mascota = new Mascota({nombre, especie, raza, edad});
 
     const salt = bcryptjs.genSaltSync();
     
