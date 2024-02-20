@@ -1,5 +1,5 @@
 const bcryptjs = require('bcryptjs');
-const Mascota = require('../models/pet');
+const Mascota = require('../models/mascotas');
 const { response } = require('express');
 
 const mascotasGet = async (req, res = response) =>{

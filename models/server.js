@@ -9,7 +9,7 @@ class Server{
         this.app = express();
         this.port = process.env.PORT;
         this.usuariosPath = "/api/usuarios";
-        this.mascotasPath = "/api/mascotas";
+        this.mascotasPath = "/api/mascota";
 
         this.conectarDB();
         this.middlewares();
@@ -27,11 +27,8 @@ class Server{
     }
 
     routes(){
-        this.app.use(this.usuariosPath, require('../routes/user.routes'));
-    }
-
-    routes2(){
-        this.app.use(this.usuariosPath, require('../routes/pet.routes'));
+        this.app.use(this.usuariosPath, require('../routes/user.routes')),
+        this.app.use(this.mascotasPath, require('../routes/pet.routes'));
     }
 
     listen(){
